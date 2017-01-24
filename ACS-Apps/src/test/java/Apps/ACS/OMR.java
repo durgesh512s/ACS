@@ -11,14 +11,14 @@ public class OMR extends Method {
 	public void OMRLaunch() throws IOException {
 		loadProperties(p);
 		driver.get(p.getProperty("eweb"));
-		logMessage("OMR Launch Successfully");
+		logMessage("******OMR Launch Successfully******");
 		driver.switchTo().frame("eWebFrame");
 		driver.findElement(By.xpath("(//input[@type='radio'])[3]")).click();
 		driver.findElement(By.xpath("//input[@class='input-user-name']")).sendKeys(p.getProperty("Web LoginR"));
 		driver.findElement(By.xpath("//input[@class='input-password']")).sendKeys(p.getProperty("Pass"));
 		driver.findElement(By.xpath("//input[@value='Verify']")).click();
 		driver.switchTo().defaultContent();
-		logMessage("OMR Logged In Successfully");
+		logMessage("********OMR Logged In Successfully**********");
 	}
 
 	@Test(dependsOnMethods = "OMRLaunch")
@@ -40,10 +40,9 @@ public class OMR extends Method {
 		driver.findElement(By.id("btnSubmitOmrPayment")).click();
 		switchToDefaultContent();
 		switchToFrame("eWebFrame");
-		logMessage("New Expire Date =");
 		String s = driver.findElement(By.id("c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"))
 				.getText();
-		System.out.println(s);
+		logMessage("New Expire Date ="+s);
 		driver.switchTo().defaultContent();
 		driver.findElement(By.xpath("//a[@href='../logout']")).click();
 	}

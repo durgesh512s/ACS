@@ -14,7 +14,7 @@ public class Iweb_Regular_Active_Member extends Method {
 		maximize();
 		loadProperties(p);
 		driver.get(p.getProperty("iweb"));
-		logMessage("Launch Iweb Successfully For Regular Active Members ");
+		logMessage("++++++++++Launch Iweb Successfully For Regular Active Members+++++++++++++");
 	}
 
 	@Test(dependsOnMethods = "IwebLaunch")

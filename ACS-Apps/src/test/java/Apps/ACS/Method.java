@@ -33,7 +33,6 @@ abstract class Method {
 	String Actualtext;
 	static String weblogin;
 	static String[] tokens;
-	static String contactid;
 	static File file = new File("C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\Property\\data.properties");
 
 	public static void javascript(String s) {

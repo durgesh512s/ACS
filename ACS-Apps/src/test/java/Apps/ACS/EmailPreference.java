@@ -11,7 +11,7 @@ public class EmailPreference extends Method {
 	public void EmailLaunch() throws IOException {
 		loadProperties(p);
 		driver.get(p.getProperty("EmailP"));
-		logMessage("Launch Email Preference Successfully");
+		logMessage("---------Launch Email Preference Successfully----------");
 	}
 
 	@Test(dependsOnMethods = "EmailLaunch")
@@ -19,7 +19,7 @@ public class EmailPreference extends Method {
 		driver.findElement(By.id("tbCredential1")).sendKeys(p.getProperty("Web Login"));
 		driver.findElement(By.id("tbCredential2")).sendKeys(p.getProperty("Pass"));
 		driver.findElement(By.id("btnLogin")).click();
-		logMessage("Logged In Email Preference Successfully");
+		logMessage("++++++++++Logged In Email Preference Successfully++++++++++");
 	}
 
 }
