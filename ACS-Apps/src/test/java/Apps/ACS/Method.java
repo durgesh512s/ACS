@@ -14,26 +14,13 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
-abstract class Method {
-	static WebDriverWait wait;
-	static ProfilesIni profile = new ProfilesIni();
-	static FirefoxProfile myprofile = profile.getProfile("seleniumprofile");
-	static WebDriver driver = new FirefoxDriver(myprofile);
-	static Properties p = new Properties();
-	String Actualtext;
-	static String weblogin;
-	static String[] tokens;
-	static File file = new File("C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\Property\\data.properties");
+abstract class Method extends Objects {
 
 	public static void javascript(String s) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
