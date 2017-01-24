@@ -7,11 +7,13 @@ import org.testng.annotations.Test;
 
 public class Iweb_Active_Renewed_NoResponse extends Method {
 
+
 	@Test
 	public void LaunchR() throws InterruptedException, IOException {
 		maximize();
-		data();
+		loadProperties(p);
 		driver.get(p.getProperty("iweb"));
+		logMessage("Launch Iweb Successfully For Active Renewed No Response ");
 	}
 
 	@Test(dependsOnMethods = "LaunchR")
@@ -19,7 +21,7 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 		time(15);
 		javascript("document.getElementsByClassName('iconpad')[0].click()");
 		javascript("document.getElementById('UI_88').click()");
-		
+
 	}
 
 	@Test(dependsOnMethods = "MembershipR")
@@ -32,7 +34,7 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 		logMessage("Member Status= Active Renewed-no Response");
 
 		javascript("document.getElementById('ValueDropDownList4').value='99520115-cfba-4d82-93fc-0db58992acef'"); // Active_Renewed-no_Response
-		
+
 		javascript("document.getElementById('ValueDropDownList13').value='Brazil'");
 		driver.findElement(By.id("ButtonSearch")).click();
 	}
@@ -43,11 +45,12 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[10]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
 		logMessage("Contact Id=");
-		Contactid = driver.findElement(By.id("F1_cst_id")).getText();
-		System.out.println(Contactid);
+		contactid = driver.findElement(By.id("F1_cst_id")).getText();
+		System.out.println(contactid);
 		logMessage("Web Login=");
 		weblogin = driver.findElement(By.id("F1_cst_web_login")).getText();
-		System.out.println(weblogin);
+		p.setProperty("Web LoginR", weblogin);
+		saveProperties(p);
 		logMessage("Customer Name=");
 		String Name = driver.findElement(By.id("ChildDivDataFormHeader")).getText();
 		System.out.println(Name);

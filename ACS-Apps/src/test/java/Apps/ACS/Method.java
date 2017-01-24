@@ -2,11 +2,13 @@ package Apps.ACS;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
@@ -31,7 +33,8 @@ abstract class Method {
 	String Actualtext;
 	static String weblogin;
 	static String[] tokens;
-	static String Contactid;
+	static String contactid;
+	static File file = new File("C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\Property\\data.properties");
 
 	public static void javascript(String s) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -70,12 +73,6 @@ abstract class Method {
 		driver.switchTo().window(parentWindowHandler);
 	}
 
-	public void data() throws IOException {
-		FileInputStream fin = new FileInputStream(
-				"C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\src\\test\\java\\Apps\\ACS\\data.properties");
-		p.load(fin);
-	}
-
 	public void scrollDown(WebElement element) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
@@ -103,6 +100,18 @@ abstract class Method {
 
 	public void switchToDefaultContent() {
 		driver.switchTo().defaultContent();
+	}
+
+	static void saveProperties(Properties p) throws IOException {
+		FileOutputStream fr = new FileOutputStream(file);
+		p.store(fr, "Properties");
+		fr.close();
+	}
+
+	static void loadProperties(Properties p) throws IOException {
+		FileInputStream fi = new FileInputStream(file);
+		p.load(fi);
+		fi.close();
 	}
 
 	public void screenshot() throws IOException {

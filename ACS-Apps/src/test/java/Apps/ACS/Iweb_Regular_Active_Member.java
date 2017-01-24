@@ -7,10 +7,12 @@ import org.testng.annotations.Test;
 
 public class Iweb_Regular_Active_Member extends Method {
 
-	@Test
+
+
+	@Test()
 	public void IwebLaunch() throws InterruptedException, IOException {
 		maximize();
-		data();
+		loadProperties(p);
 		driver.get(p.getProperty("iweb"));
 		logMessage("Launch Iweb Successfully For Regular Active Members ");
 	}
@@ -32,7 +34,7 @@ public class Iweb_Regular_Active_Member extends Method {
 		logMessage("Member Status= Active Regular Members");
 
 		javascript("document.getElementById('ValueDropDownList3').value='455fef87-5fc0-42dd-92a5-77194f1e1708'"); // RegularMember
-																												
+
 		javascript("document.getElementById('ValueDropDownList4').value='fb6da915-043e-41cd-ac68-65dc06cd49bb'"); // Active
 		driver.findElement(By.id("ButtonSearch")).click();
 	}
@@ -40,14 +42,13 @@ public class Iweb_Regular_Active_Member extends Method {
 	@Test(dependsOnMethods = "FindMembershipA")
 	public void IndividualA() throws Exception {
 		time(10);
-		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[7]")).click();
+		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[3]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
-		logMessage("Contact Id=");
-		Contactid = driver.findElement(By.id("F1_cst_id")).getText();
-		System.out.println(Contactid);
-		logMessage("Web Login=");
+		driver.findElement(By.id("F1_cst_id")).getText();
 		weblogin = driver.findElement(By.id("F1_cst_web_login")).getText();
-		System.out.println(weblogin);
+		p.setProperty("Web Login", weblogin);
+		saveProperties(p);
+		logMessage("Web Login=" + weblogin);
 	}
 
 }

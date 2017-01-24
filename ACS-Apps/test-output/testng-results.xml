@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" total="14" passed="13">
+  <reporter-output>
+    <line>
+      <![CDATA[Launch Iweb Successfully For Regular Active Members ]]>
+    </line>
+    <line>
+      <![CDATA[Member Status= Active Regular Members]]>
+    </line>
+    <line>
+      <![CDATA[Web Login=lalungwitz]]>
+    </line>
+    <line>
+      <![CDATA[Launch Email Preference Successfully]]>
+    </line>
+    <line>
+      <![CDATA[Logged In Email Preference Successfully]]>
+    </line>
+    <line>
+      <![CDATA[Launch Iweb Successfully For Active Renewed No Response ]]>
+    </line>
+    <line>
+      <![CDATA[Member Status= Active Renewed-no Response]]>
+    </line>
+    <line>
+      <![CDATA[Contact Id=]]>
+    </line>
+    <line>
+      <![CDATA[Web Login=]]>
+    </line>
+    <line>
+      <![CDATA[Customer Name=]]>
+    </line>
+    <line>
+      <![CDATA[Address=]]>
+    </line>
+    <line>
+      <![CDATA[Invoice No=]]>
+    </line>
+    <line>
+      <![CDATA[Date=]]>
+    </line>
+    <line>
+      <![CDATA[Join=]]>
+    </line>
+    <line>
+      <![CDATA[Expire=]]>
+    </line>
+    <line>
+      <![CDATA[OMR Launch Successfully]]>
+    </line>
+    <line>
+      <![CDATA[OMR Logged In Successfully]]>
+    </line>
+    <line>
+      <![CDATA[New Expire Date =]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite1" duration-ms="324479" started-at="2017-01-24T10:27:38Z" finished-at="2017-01-24T10:33:03Z">
+    <groups>
+    </groups>
+    <test name="First" duration-ms="324479" started-at="2017-01-24T10:27:38Z" finished-at="2017-01-24T10:33:03Z">
+      <class name="Apps.ACS.Iweb_Regular_Active_Member">
+        <test-method status="PASS" signature="IwebLaunch()[pri:0, instance:Apps.ACS.Iweb_Regular_Active_Member@2ca923bb]" name="IwebLaunch" duration-ms="13121" started-at="2017-01-24T15:57:38Z" finished-at="2017-01-24T15:57:51Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Launch Iweb Successfully For Regular Active Members ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- IwebLaunch -->
+        <test-method status="PASS" signature="MembershipA()[pri:0, instance:Apps.ACS.Iweb_Regular_Active_Member@2ca923bb]" name="MembershipA" duration-ms="90" started-at="2017-01-24T15:57:51Z" depends-on-methods="Apps.ACS.Iweb_Regular_Active_Member.IwebLaunch" finished-at="2017-01-24T15:57:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MembershipA -->
+        <test-method status="PASS" signature="FindMembersA()[pri:0, instance:Apps.ACS.Iweb_Regular_Active_Member@2ca923bb]" name="FindMembersA" duration-ms="5097" started-at="2017-01-24T15:57:52Z" depends-on-methods="Apps.ACS.Iweb_Regular_Active_Member.MembershipA" finished-at="2017-01-24T15:57:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FindMembersA -->
+        <test-method status="PASS" signature="FindMembershipA()[pri:0, instance:Apps.ACS.Iweb_Regular_Active_Member@2ca923bb]" name="FindMembershipA" duration-ms="4463" started-at="2017-01-24T15:57:57Z" depends-on-methods="Apps.ACS.Iweb_Regular_Active_Member.FindMembersA" finished-at="2017-01-24T15:58:01Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Member Status= Active Regular Members]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- FindMembershipA -->
+        <test-method status="PASS" signature="IndividualA()[pri:0, instance:Apps.ACS.Iweb_Regular_Active_Member@2ca923bb]" name="IndividualA" duration-ms="8760" started-at="2017-01-24T15:58:01Z" depends-on-methods="Apps.ACS.Iweb_Regular_Active_Member.FindMembershipA" finished-at="2017-01-24T15:58:10Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Web Login=lalungwitz]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- IndividualA -->
+      </class> <!-- Apps.ACS.Iweb_Regular_Active_Member -->
+      <class name="Apps.ACS.EmailPreference">
+        <test-method status="PASS" signature="EmailLaunch()[pri:0, instance:Apps.ACS.EmailPreference@7de62196]" name="EmailLaunch" duration-ms="1993" started-at="2017-01-24T15:58:10Z" finished-at="2017-01-24T15:58:12Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Launch Email Preference Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- EmailLaunch -->
+        <test-method status="PASS" signature="LoginApp()[pri:0, instance:Apps.ACS.EmailPreference@7de62196]" name="LoginApp" duration-ms="13318" started-at="2017-01-24T15:58:12Z" depends-on-methods="Apps.ACS.EmailPreference.EmailLaunch" finished-at="2017-01-24T15:58:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Logged In Email Preference Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LoginApp -->
+      </class> <!-- Apps.ACS.EmailPreference -->
+      <class name="Apps.ACS.OMR">
+        <test-method status="PASS" signature="OMRLaunch()[pri:0, instance:Apps.ACS.OMR@35a3d49f]" name="OMRLaunch" duration-ms="32441" started-at="2017-01-24T15:59:12Z" finished-at="2017-01-24T15:59:45Z">
+          <reporter-output>
+            <line>
+              <![CDATA[OMR Launch Successfully]]>
+            </line>
+            <line>
+              <![CDATA[OMR Logged In Successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- OMRLaunch -->
+        <test-method status="FAIL" signature="Payment()[pri:0, instance:Apps.ACS.OMR@35a3d49f]" name="Payment" duration-ms="198112" started-at="2017-01-24T15:59:45Z" depends-on-methods="Apps.ACS.OMR.OMRLaunch" finished-at="2017-01-24T16:03:03Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"}
+Command duration or timeout: 114.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'ASDP1524PO01976', ip: '172.29.241.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 94433bf7-f888-4078-ab93-a9eed40d45b1
+*** Element info: {Using=id, value=c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"}
+Command duration or timeout: 114.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'ASDP1524PO01976', ip: '172.29.241.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 94433bf7-f888-4078-ab93-a9eed40d45b1
+*** Element info: {Using=id, value=c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at Apps.ACS.OMR.Payment(OMR.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'ASDP1524PO01976', ip: '172.29.241.108', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+            <line>
+              <![CDATA[New Expire Date =]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Payment -->
+      </class> <!-- Apps.ACS.OMR -->
+      <class name="Apps.ACS.Iweb_Active_Renewed_NoResponse">
+        <test-method status="PASS" signature="LaunchR()[pri:0, instance:Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2]" name="LaunchR" duration-ms="5956" started-at="2017-01-24T15:58:25Z" finished-at="2017-01-24T15:58:31Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Launch Iweb Successfully For Active Renewed No Response ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- LaunchR -->
+        <test-method status="PASS" signature="MembershipR()[pri:0, instance:Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2]" name="MembershipR" duration-ms="2536" started-at="2017-01-24T15:58:31Z" depends-on-methods="Apps.ACS.Iweb_Active_Renewed_NoResponse.LaunchR" finished-at="2017-01-24T15:58:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MembershipR -->
+        <test-method status="PASS" signature="FindMembersR()[pri:0, instance:Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2]" name="FindMembersR" duration-ms="1996" started-at="2017-01-24T15:58:34Z" depends-on-methods="Apps.ACS.Iweb_Active_Renewed_NoResponse.MembershipR" finished-at="2017-01-24T15:58:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FindMembersR -->
+        <test-method status="PASS" signature="FindMembershipR()[pri:0, instance:Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2]" name="FindMembershipR" duration-ms="5326" started-at="2017-01-24T15:58:36Z" depends-on-methods="Apps.ACS.Iweb_Active_Renewed_NoResponse.FindMembersR" finished-at="2017-01-24T15:58:41Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Member Status= Active Renewed-no Response]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- FindMembershipR -->
+        <test-method status="PASS" signature="IndividualR()[pri:0, instance:Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2]" name="IndividualR" duration-ms="31200" started-at="2017-01-24T15:58:41Z" depends-on-methods="Apps.ACS.Iweb_Active_Renewed_NoResponse.FindMembershipR" finished-at="2017-01-24T15:59:12Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Contact Id=]]>
+            </line>
+            <line>
+              <![CDATA[Web Login=]]>
+            </line>
+            <line>
+              <![CDATA[Customer Name=]]>
+            </line>
+            <line>
+              <![CDATA[Address=]]>
+            </line>
+            <line>
+              <![CDATA[Invoice No=]]>
+            </line>
+            <line>
+              <![CDATA[Date=]]>
+            </line>
+            <line>
+              <![CDATA[Join=]]>
+            </line>
+            <line>
+              <![CDATA[Expire=]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- IndividualR -->
+      </class> <!-- Apps.ACS.Iweb_Active_Renewed_NoResponse -->
+    </test> <!-- First -->
+  </suite> <!-- Suite1 -->
+</testng-results>

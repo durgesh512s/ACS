@@ -1,0 +1,312 @@
+<html>
+<head>
+<title>TestNG:  First</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>First</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jan 24 15:57:38 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>324 seconds (324479 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Apps.ACS.OMR.Payment()'><b>Payment</b><br>Test class: Apps.ACS.OMR<br/>
+<a href="#Output-970535245" onClick='toggleBox("Output-970535245", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-970535245" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-970535245">
+New Expire Date =<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate&quot;}
+Command duration or timeout: 114.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ASDP1524PO01976&apos;, ip: &apos;172.29.241.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 94433bf7-f888-4078-ab93-a9eed40d45b1
+*** Element info: {Using=id, value=c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at Apps.ACS.OMR.Payment(OMR.java:44)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ASDP1524PO01976&apos;, ip: &apos;172.29.241.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace970535245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace970535245'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate&quot;}
+Command duration or timeout: 114.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ASDP1524PO01976&apos;, ip: &apos;172.29.241.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 94433bf7-f888-4078-ab93-a9eed40d45b1
+*** Element info: {Using=id, value=c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at Apps.ACS.OMR.Payment(OMR.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;ASDP1524PO01976&apos;, ip: &apos;172.29.241.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/DURGES~1/AppData/Local/Temp/anonymous6834150975815305081webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>198</td>
+<td>Apps.ACS.OMR@35a3d49f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Apps.ACS.EmailPreference.EmailLaunch()'><b>EmailLaunch</b><br>Test class: Apps.ACS.EmailPreference<br/>
+<a href="#Output-1168924571" onClick='toggleBox("Output-1168924571", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1168924571" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1168924571">
+Launch Email Preference Successfully<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>Apps.ACS.EmailPreference@7de62196</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Regular_Active_Member.FindMembersA()'><b>FindMembersA</b><br>Test class: Apps.ACS.Iweb_Regular_Active_Member</td>
+<td></td>
+<td>5</td>
+<td>Apps.ACS.Iweb_Regular_Active_Member@2ca923bb</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Active_Renewed_NoResponse.FindMembersR()'><b>FindMembersR</b><br>Test class: Apps.ACS.Iweb_Active_Renewed_NoResponse</td>
+<td></td>
+<td>1</td>
+<td>Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Regular_Active_Member.FindMembershipA()'><b>FindMembershipA</b><br>Test class: Apps.ACS.Iweb_Regular_Active_Member<br/>
+<a href="#Output-464224872" onClick='toggleBox("Output-464224872", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-464224872" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-464224872">
+Member Status= Active Regular Members<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>Apps.ACS.Iweb_Regular_Active_Member@2ca923bb</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Active_Renewed_NoResponse.FindMembershipR()'><b>FindMembershipR</b><br>Test class: Apps.ACS.Iweb_Active_Renewed_NoResponse<br/>
+<a href="#Output-1337866219" onClick='toggleBox("Output-1337866219", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1337866219" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1337866219">
+Member Status= Active Renewed-no Response<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Regular_Active_Member.IndividualA()'><b>IndividualA</b><br>Test class: Apps.ACS.Iweb_Regular_Active_Member<br/>
+<a href="#Output-380274260" onClick='toggleBox("Output-380274260", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-380274260" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-380274260">
+Web Login=lalungwitz<br/>
+</div>
+</td>
+<td></td>
+<td>8</td>
+<td>Apps.ACS.Iweb_Regular_Active_Member@2ca923bb</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Active_Renewed_NoResponse.IndividualR()'><b>IndividualR</b><br>Test class: Apps.ACS.Iweb_Active_Renewed_NoResponse<br/>
+<a href="#Output-1642785848" onClick='toggleBox("Output-1642785848", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1642785848" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1642785848">
+Contact Id=<br/>
+Web Login=<br/>
+Customer Name=<br/>
+Address=<br/>
+Invoice No=<br/>
+Date=<br/>
+Join=<br/>
+Expire=<br/>
+</div>
+</td>
+<td></td>
+<td>31</td>
+<td>Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Regular_Active_Member.IwebLaunch()'><b>IwebLaunch</b><br>Test class: Apps.ACS.Iweb_Regular_Active_Member<br/>
+<a href="#Output-478489615" onClick='toggleBox("Output-478489615", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-478489615" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-478489615">
+Launch Iweb Successfully For Regular Active Members <br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>Apps.ACS.Iweb_Regular_Active_Member@2ca923bb</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Active_Renewed_NoResponse.LaunchR()'><b>LaunchR</b><br>Test class: Apps.ACS.Iweb_Active_Renewed_NoResponse<br/>
+<a href="#Output-388104475" onClick='toggleBox("Output-388104475", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-388104475" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-388104475">
+Launch Iweb Successfully For Active Renewed No Response <br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2</td></tr>
+<tr>
+<td title='Apps.ACS.EmailPreference.LoginApp()'><b>LoginApp</b><br>Test class: Apps.ACS.EmailPreference<br/>
+<a href="#Output-351962798" onClick='toggleBox("Output-351962798", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-351962798" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-351962798">
+Logged In Email Preference Successfully<br/>
+</div>
+</td>
+<td></td>
+<td>13</td>
+<td>Apps.ACS.EmailPreference@7de62196</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Regular_Active_Member.MembershipA()'><b>MembershipA</b><br>Test class: Apps.ACS.Iweb_Regular_Active_Member</td>
+<td></td>
+<td>0</td>
+<td>Apps.ACS.Iweb_Regular_Active_Member@2ca923bb</td></tr>
+<tr>
+<td title='Apps.ACS.Iweb_Active_Renewed_NoResponse.MembershipR()'><b>MembershipR</b><br>Test class: Apps.ACS.Iweb_Active_Renewed_NoResponse</td>
+<td></td>
+<td>2</td>
+<td>Apps.ACS.Iweb_Active_Renewed_NoResponse@163370c2</td></tr>
+<tr>
+<td title='Apps.ACS.OMR.OMRLaunch()'><b>OMRLaunch</b><br>Test class: Apps.ACS.OMR<br/>
+<a href="#Output-1080476785" onClick='toggleBox("Output-1080476785", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1080476785" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1080476785">
+OMR Launch Successfully<br/>
+OMR Logged In Successfully<br/>
+</div>
+</td>
+<td></td>
+<td>32</td>
+<td>Apps.ACS.OMR@35a3d49f</td></tr>
+</table><p>
+</body>
+</html>
