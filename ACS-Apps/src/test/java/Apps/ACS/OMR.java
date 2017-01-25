@@ -14,7 +14,7 @@ public class OMR extends Method {
 		logMessage("******OMR Launch Successfully******");
 		driver.switchTo().frame("eWebFrame");
 		driver.findElement(By.xpath("(//input[@type='radio'])[3]")).click();
-		driver.findElement(By.xpath("//input[@class='input-user-name']")).sendKeys(p.getProperty("Web LoginR"));
+		driver.findElement(By.xpath("//input[@class='input-user-name']")).sendKeys(p.getProperty("Web_Login"));
 		driver.findElement(By.xpath("//input[@class='input-password']")).sendKeys(p.getProperty("Pass"));
 		driver.findElement(By.xpath("//input[@value='Verify']")).click();
 		driver.switchTo().defaultContent();
@@ -29,20 +29,26 @@ public class OMR extends Method {
 		// ]')]")).click();
 		driver.findElement(By.xpath("//select[@class='cc']//option[contains(text(),'Visa/MC')]")).click();
 		driver.findElement(By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCardholderName"))
-		.sendKeys("ACS TEST");
+				.sendKeys(p.getProperty("Cardholder"));
 		driver.findElement(
 				By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCreditCardNumber"))
-		.sendKeys("4111111111111111");
+				.sendKeys(p.getProperty("Cardno"));
 		driver.findElement(By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCcvNumber"))
-		.sendKeys("123");
+				.sendKeys(p.getProperty("Cvv"));
+		driver.findElement(By.id("cbPubSciEula")).click();
 		driver.findElement(By.id("btnContinue")).click();
 		switchToFrame("eWebFrame");
 		driver.findElement(By.id("btnSubmitOmrPayment")).click();
 		switchToDefaultContent();
 		switchToFrame("eWebFrame");
-		String s = driver.findElement(By.id("c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"))
+		expire = driver.findElement(By.id("c5824dae_279c_4392_b6d0_3efa2906fbab_lblMembershipExpirationDate"))
 				.getText();
-		logMessage("New Expire Date ="+s);
+		logMessage("New Expire Date =" + expire);
+		String notice = driver
+				.findElement(
+						By.id("c5824dae_279c_4392_b6d0_3efa2906fbab_userControlMembershipAccountView_lblRenewalNumber"))
+				.getText();
+		logMessage("Notice No=" + notice);
 		driver.switchTo().defaultContent();
 		driver.findElement(By.xpath("//a[@href='../logout']")).click();
 	}

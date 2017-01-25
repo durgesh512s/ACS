@@ -12,6 +12,7 @@ public class Iweb_Regular_Active_Member extends Method {
 	@Test()
 	public void IwebLaunch() throws InterruptedException, IOException {
 		maximize();
+		time(15);
 		loadProperties(p);
 		driver.get(p.getProperty("iweb"));
 		logMessage("++++++++++Launch Iweb Successfully For Regular Active Members+++++++++++++");
@@ -19,7 +20,7 @@ public class Iweb_Regular_Active_Member extends Method {
 
 	@Test(dependsOnMethods = "IwebLaunch")
 	public void MembershipA() throws Exception {
-		time(15);
+		
 		javascript("document.getElementsByClassName('iconpad')[0].click()");
 		javascript("document.getElementById('UI_88').click()");
 	}

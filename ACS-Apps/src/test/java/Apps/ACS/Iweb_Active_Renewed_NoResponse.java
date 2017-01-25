@@ -34,14 +34,14 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 
 		javascript("document.getElementById('ValueDropDownList4').value='99520115-cfba-4d82-93fc-0db58992acef'"); // Active_Renewed-no_Response
 
-		javascript("document.getElementById('ValueDropDownList13').value='Brazil'");
+		javascript("document.getElementById('ValueDropDownList13').value='Nigeria'");
 		driver.findElement(By.id("ButtonSearch")).click();
 	}
 
 	@Test(dependsOnMethods = "FindMembershipR")
 	public void IndividualR() throws Exception {
-		time(15);
-		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[6]")).click();
+		time(20);
+		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[8]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
 		String contactid = driver.findElement(By.id("F1_cst_id")).getText();
 		logMessage("Contact Id=" + contactid);
@@ -66,8 +66,14 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 		javascript("document.getElementsByClassName('icon-chevron-down')[0].click()");
 		String join = driver.findElement(By.id("UP34")).getText();
 		logMessage("Join=" + join);
-		String Expire = driver.findElement(By.id("UP40")).getText();
-		logMessage("Expire=" + Expire);
+		expire = driver.findElement(By.id("UP40")).getText();
+		logMessage("Expire=" + expire);
+		/*javascript("document.getElementById('Link757be236-feb2-475e-8367-2dad2e530267').click()"); // PaymentDetails
+		hardwait(5);
+		javascript("document.getElementById('IB_5ced3b9f-c104-4784-b601-e1e8ecb52bc5refresh').click()");
+		String payment = driver.findElement(By.id("UP24")).getText();
+		logMessage("Last Payment=" + payment);*/
+
 	}
 
 }

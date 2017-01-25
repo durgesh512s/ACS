@@ -17,6 +17,7 @@ public class Objects {
 	static WebDriver driver = new FirefoxDriver(myprofile);
 	static Properties p = new Properties();
 	String Actualtext;
+	static String expire;
 	static String weblogin;
 	static String[] tokens;
 	static File file = new File("C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\Property\\data.properties");
