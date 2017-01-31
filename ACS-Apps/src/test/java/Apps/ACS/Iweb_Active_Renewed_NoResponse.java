@@ -41,13 +41,15 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 	@Test(dependsOnMethods = "FindMembershipR")
 	public void IndividualR() throws Exception {
 		time(20);
-		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[8]")).click();
+		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[3]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
-		String contactid = driver.findElement(By.id("F1_cst_id")).getText();
+		contactid = driver.findElement(By.id("F1_cst_id")).getText();
 		logMessage("Contact Id=" + contactid);
+		p.setProperty("ContactId", contactid);
+		saveProperties(p);
 		weblogin = driver.findElement(By.id("F1_cst_web_login")).getText();
 		logMessage("Web Login=" + weblogin);
-		p.setProperty("Web LoginR", weblogin);
+		p.setProperty("WebLoginR", weblogin);
 		saveProperties(p);
 		String Name = driver.findElement(By.id("ChildDivDataFormHeader")).getText();
 		logMessage("Customer Name=" + Name);
@@ -68,11 +70,14 @@ public class Iweb_Active_Renewed_NoResponse extends Method {
 		logMessage("Join=" + join);
 		expire = driver.findElement(By.id("UP40")).getText();
 		logMessage("Expire=" + expire);
-		/*javascript("document.getElementById('Link757be236-feb2-475e-8367-2dad2e530267').click()"); // PaymentDetails
-		hardwait(5);
-		javascript("document.getElementById('IB_5ced3b9f-c104-4784-b601-e1e8ecb52bc5refresh').click()");
-		String payment = driver.findElement(By.id("UP24")).getText();
-		logMessage("Last Payment=" + payment);*/
+		/*
+		 * javascript(
+		 * "document.getElementById('Link757be236-feb2-475e-8367-2dad2e530267').click()"
+		 * ); // PaymentDetails hardwait(5); javascript(
+		 * "document.getElementById('IB_5ced3b9f-c104-4784-b601-e1e8ecb52bc5refresh').click()"
+		 * ); String payment = driver.findElement(By.id("UP24")).getText();
+		 * logMessage("Last Payment=" + payment);
+		 */
 
 	}
 

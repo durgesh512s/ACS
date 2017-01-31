@@ -43,11 +43,11 @@ public class Iweb_Regular_Active_Member extends Method {
 	@Test(dependsOnMethods = "FindMembershipA")
 	public void IndividualA() throws Exception {
 		time(10);
-		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[3]")).click();
+		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[2]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
 		driver.findElement(By.id("F1_cst_id")).getText();
 		weblogin = driver.findElement(By.id("F1_cst_web_login")).getText();
-		p.setProperty("Web Login", weblogin);
+		p.setProperty("WebLoginA", weblogin);
 		saveProperties(p);
 		logMessage("Web Login=" + weblogin);
 	}

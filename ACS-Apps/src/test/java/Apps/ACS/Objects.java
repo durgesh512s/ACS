@@ -4,6 +4,7 @@ import java.io.File;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
@@ -18,7 +19,9 @@ public class Objects {
 	static Properties p = new Properties();
 	String Actualtext;
 	static String expire;
+	static String contactid;
 	static String weblogin;
 	static String[] tokens;
+	static WebElement element;
 	static File file = new File("C:\\Users\\durgeshsharma\\workspace\\ACS-Apps\\Property\\data.properties");
 }

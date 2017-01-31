@@ -30,18 +30,15 @@ public class Verify_for_renewed extends Method {
 
 	@Test(dependsOnMethods = "FindMembersR")
 	public void FindMembershipR() throws Exception {
-		logMessage("****Member Status= Active Renewed-no Response*****");
-
-		javascript("document.getElementById('ValueDropDownList4').value='99520115-cfba-4d82-93fc-0db58992acef'"); // Active_Renewed-no_Response
-
-		javascript("document.getElementById('ValueDropDownList13').value='Nigeria'");
+		
+		driver.findElement(By.id("ValueTextBox14")).sendKeys(p.getProperty("ContactId"));
 		driver.findElement(By.id("ButtonSearch")).click();
 	}
 
 	@Test(dependsOnMethods = "FindMembershipR")
 	public void IndividualR() throws Exception {
 		time(15);
-		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[8]")).click();
+		driver.findElement(By.xpath("(//td[contains(text(),'Individual')])[1]")).click();
 		driver.findElement(By.id("F1_HYPERLINK_4")).click(); // Costumer name
 		javascript("document.getElementsByClassName('icon-chevron-down')[0].click()");
 		String Expire = driver.findElement(By.id("UP40")).getText();
