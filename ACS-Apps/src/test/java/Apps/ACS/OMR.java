@@ -15,7 +15,7 @@ public class OMR extends Method {
 		logMessage("******OMR Launch Successfully******");
 		driver.switchTo().frame("eWebFrame");
 		driver.findElement(By.xpath("(//input[@type='radio'])[2]")).click();
-		driver.findElement(By.xpath("//input[@class='input-user-name']")).sendKeys(tokens[tokens.length-1]);
+		driver.findElement(By.xpath("//input[@class='input-user-name']")).sendKeys(tokens[tokens.length - 1]);
 		driver.findElement(By.xpath("//input[@class='input-password']")).sendKeys(p.getProperty("ContactId"));
 		driver.findElement(By.xpath("//input[@value='Verify']")).click();
 		driver.switchTo().defaultContent();
@@ -28,14 +28,15 @@ public class OMR extends Method {
 		driver.switchTo().frame("eWebFrame");
 		// driver.findElement(By.xpath("//a[contains(text(),'[ edit
 		// ]')]")).click();
-		driver.findElement(By.xpath("//select[@class='cc']//option[contains(text(),'Visa/MC')]")).click();
+		driver.findElement(By.xpath("//option[@value='e4cc52c6-66d3-414c-a0b6-8c9dcf710c47']")).click();
 		driver.findElement(By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCardholderName"))
-		.sendKeys(p.getProperty("Cardholder"));
+				.sendKeys(p.getProperty("Cardholder"));
 		driver.findElement(
 				By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCreditCardNumber"))
-		.sendKeys(p.getProperty("Cardno"));
+				.sendKeys(p.getProperty("Cardno"));
+		driver.findElement(By.xpath(".//*[@value='2020']")).click();
 		driver.findElement(By.id("e6401c55_2c7c_49c4_bbd4_7ea7d0148393_userControlBillingInformation_tbCcvNumber"))
-		.sendKeys(p.getProperty("Cvv"));
+				.sendKeys(p.getProperty("Cvv"));
 		time(2);
 		try {
 			driver.findElement(By.xpath("//input[@type='checkbox']")).click();

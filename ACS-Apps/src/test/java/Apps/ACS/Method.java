@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -116,5 +117,24 @@ abstract class Method extends Objects {
 
 	public void hardwait(long s) throws InterruptedException {
 		Thread.sleep(s * 1000);
+	}
+	
+	public By getBy(String locatorType, String locatorValue) {
+		switch (Locators.valueOf(locatorType)) {
+		case id:
+			return By.id(locatorValue);
+		case xpath:
+			return By.xpath(locatorValue);
+		case css:
+			return By.cssSelector(locatorValue);
+		case name:
+			return By.name(locatorValue);
+		case classname:
+			return By.className(locatorValue);
+		case linktext:
+			return By.linkText(locatorValue);
+		default:
+			return By.id(locatorValue);
+}
 	}
 }
